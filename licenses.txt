@@ -1,0 +1,6 @@
+#LicenseNam,ServerName,Port
+License1, Server1, 27000
+License2, Server2, 27001
+License3, Server3, 27002
+License4, Server4, 27003
+
