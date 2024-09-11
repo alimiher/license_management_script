@@ -10,7 +10,7 @@ This Python script generates HTML reports for license usage based on data from `
 ## Installation
 1. **Clone the repository:**
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/alimiher/license_management_script
     ```
 
 2. **Navigate to the project directory:**
