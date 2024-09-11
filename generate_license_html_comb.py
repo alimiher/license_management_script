@@ -8,7 +8,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 
 async def get_lmstat_output(port, server_name):
-    lmutil_path = "/var/www/html/lms_apps/lmutil"
+    lmutil_path = "/path/to/lmutil"
     cmd = [lmutil_path, 'lmstat', '-A', '-c', f'{port}@{server_name}']
     try:
         process = await asyncio.create_subprocess_exec(
