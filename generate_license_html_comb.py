@@ -19,7 +19,7 @@ async def get_lmstat_output(port, server_name):
         stdout, stderr = await process.communicate()
 
         if process.returncode == 0:
-            return stdout.decode()
+            return stdout.decode('utf-8', errors='replace')  # Handle invalid UTF-8 bytes
         else:
             return None
     except FileNotFoundError:
@@ -281,7 +281,7 @@ async def process_license_async(license):
         generate_html(license_name, None, error="Unable to retrieve license information.")
 
 async def main_async():
-    licenses = read_licenses("licenses.txt")
+    licenses = read_licenses("//var//www//html//lms_apps//licenses.txt")
     create_index_html(licenses)
 
     tasks = [process_license_async(license) for license in licenses]
